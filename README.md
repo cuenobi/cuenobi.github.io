@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./flowfusiontech_cover.jpeg" alt="FlowFusion Logo" width="200" />
+</p>
+
 # FLOWFUSION TECHNOLOGY – Engineering Challenge Center
 
 Welcome to the official assessment area for candidates applying to join **FlowFusion Technology** as part of our engineering team.  
