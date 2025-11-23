@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./flowfusiontech_cover.jpeg" alt="FlowFusion Logo" width="200" />
+  <img src="./flowfusiontech_cover.jpeg" alt="FlowFusion Logo" style="max-width: 100%; height: auto;" />
 </p>
 
 # FLOWFUSION TECHNOLOGY – Engineering Challenge Center
@@ -48,7 +48,7 @@ to establish an infrastructure that propels national businesses into the global 
 
 The company facilitated government efforts, generating over **USD 45 million via e-Commerce**, and has now secured partnerships across the entire value chain.
 
-For more information, visit: https://www.flowfusion.asia/
+For more information, visit: <a href="https://www.flowfusion.asia">FLOWFUSION TECHNOLOGY WEBSITE</a>
 
 ---
 
