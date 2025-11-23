@@ -1,87 +1,51 @@
-# QTech Solutions
+# FLOWFUSION TECHNOLOGY – Engineering Challenge Center
 
-<nav>
-  <a href="/">Home</a>
-  <a href="/about.html">About</a>
-  <a href="/careers.html">Careers</a>
-  <a href="/contact.html">Contact</a>
-</nav>
-
-<p align="center">
-  <img src="https://via.placeholder.com/200x60?text=QTech+Logo" alt="QTech Solutions Logo">
-</p>
-
-Engineering the Future of Digital Commerce
-
-ยินดีต้อนรับสู่พื้นที่อย่างเป็นทางการของ **QTech Solutions**  
-บริษัทเทคโนโลยีสมัยใหม่ที่มุ่งสร้างระบบดิจิทัลให้ธุรกิจเติบโตอย่างมั่นคงและยั่งยืน
+Welcome to the official assessment area for candidates applying to join **FlowFusion Technology** as part of our engineering team.  
+Please review the instructions below and complete the challenge that matches your desired role.
 
 ---
 
-## 🚀 เกี่ยวกับเรา
+## Our hiring process
 
-**QTech Solutions** คือผู้ให้บริการเทคโนโลยีครบวงจรสำหรับอีคอมเมิร์ซและโลจิสติกส์  
-เราพัฒนาระบบที่รองรับการทำงานระดับองค์กร พร้อมสเกลได้จริงในโลกธุรกิจยุคใหม่
+We follow a two-phase evaluation process:
 
-โซลูชันของเราครอบคลุมตั้งแต่:
+1. **Engineering Challenge**
+2. **Team Interview**
 
-- ระบบจัดการออเดอร์แบบกระจาย (Distributed Order Management)
-- ระบบคลังสินค้า (Warehouse Management System)
-- ระบบจัดการขนส่ง (Transport & Routing Optimization)
-- ระบบบริหารข้อมูล (Data Platform & Real‑Time Processing)
-- ระบบอัตโนมัติทางธุรกิจ (Workflow Automation)
-- Microservices Infrastructure & Cloud Engineering
+### Step One  
+The first step is completing the assigned challenge. These tasks are designed to be straightforward and should take no more than a few hours.
 
-เรามุ่งเน้นความเสถียร ความปลอดภัย และความสามารถในการรองรับปริมาณงานสูง  
-เพื่อให้ธุรกิจของคุณเติบโตได้อย่างไร้ข้อจำกัด
+### Step Two  
+Candidates who pass the initial screening will proceed to a final discussion with our technical team, either online or on-site.
 
 ---
 
-## 🧪 Candidate Engineering Challenges
+## Software Engineering Test
 
-ในฐานะบริษัทเทคชั้นนำ เราให้ความสำคัญกับคุณภาพของวิศวกร  
-และนี่คือพื้นที่สำหรับแบบทดสอบผู้สมัครงานด้าน Engineering
+If you are applying for a Software Engineering position, please complete the appropriate assignment and submit it via the designated form.
 
-**กระบวนการสมัครงานของเรา**
+- **Front-End Engineer**  
+  Choose one assignment related to frontend development.
 
-1. ทำแบบทดสอบตามตำแหน่งที่สมัคร  
-2. ส่งผลงานเพื่อให้ทีม Engineering ตรวจสอบ  
-3. เข้าพูดคุยเชิงเทคนิคกับทีม  
-4. เข้าสัมภาษณ์รอบสุดท้ายกับผู้บริหารด้านเทคโนโลยี
+- **Back-End Engineer**  
+  Choose one backend assignment and review the provided material regarding event-driven systems.
 
----
+- **Full Stack Engineer**  
+  Complete one assignment from both the Front-End and Back-End sections, and study the concepts provided in the reference link.
 
-## 📂 Challenge Categories
-
-### 🔹 Backend Engineering
-ออกแบบและสร้าง API ที่มีประสิทธิภาพ มีความเสถียร และรองรับการขยายตัว  
-เน้น Clean Architecture, Domain‑Driven Design และการทดสอบ
-
-### 🔹 Frontend Engineering
-พัฒนา UI/UX ที่ยืดหยุ่น ปรับตัวได้ รองรับอุปกรณ์ทุกประเภท  
-ใช้ React / Next.js และหลักการ Modern Frontend Engineering
-
-### 🔹 Full‑Stack Engineering
-ออกแบบ พัฒนา และดีไซน์ระบบแบบ End‑to‑End  
-ตั้งแต่ฐานข้อมูลจนถึง UI พร้อมทักษะ DevOps ขั้นพื้นฐาน
-
-### 🔹 Data & Platform Engineering
-ออกแบบ Data Pipeline, Real‑Time Stream, และ Distributed System  
-ใช้เทคโนโลยี Data Processing ระดับ Enterprise
+*(Note: The Data Engineer track is intentionally excluded.)*
 
 ---
 
-## 📞 ติดต่อเรา
+## About us
 
-หากคุณต้องการร่วมทีม  
-หรือสนใจระบบเทคโนโลยีของ QTech Solutions  
-สามารถติดต่อได้ที่:
+FlowFusion Technology operates with a clear objective:  
+to establish an infrastructure that propels national businesses into the global landscape through innovation.
 
-- **Email:** careers@qtech-solutions.com  
-- **Website:** https://qtech-solutions.com  
-- **LinkedIn:** QTech Solutions Official
+The company facilitated government efforts, generating over **USD 45 million via e-Commerce**, and has now secured partnerships across the entire value chain.
+
+For more information, visit: https://www.flowfusion.asia/
 
 ---
 
-ขอบคุณที่แวะมาเยี่ยมชม  
-**QTech Solutions – Where Engineering Meets Innovation**
+© FlowFusion Technology — All Rights Reserved
