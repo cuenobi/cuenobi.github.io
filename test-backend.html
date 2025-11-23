@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+---
+layout: default
+title: FLOWFUSION TECHNOLOGY – Back-End Code Challenge
+description: Leading Technology Solutions for Modern Businesses
+---
+
+<p align="center">
+  <img src="./flowfusiontech_cover.jpeg" alt="FlowFusion Logo" style="max-width: 100%; height: auto;" />
+</p>
+
+# FLOWFUSION TECHNOLOGY – Back-End Code Challenge
+
+---
+
+This page describes the back-end coding assignment for candidates applying as **Back-End Engineer** or **Full-Stack Engineer** at **FlowFusion Technology**.
+
+Please read all requirements carefully and implement the assignment as if it were a real production service.
+
+> **Goal:** Design and implement a small authentication service using Go that demonstrates clean architecture, secure JWT handling, and good engineering practices.
+
+---
+
+## 1. Problem Overview
+
+Build a back-end service that provides **Authentication with JWT tokens** using:
+
+- **Language:** Go (Golang)
+- **Database:** PostgreSQL using **GORM**
+- **In-memory store:** **Redis** for authentication-related data
+- **Architecture style:** **Clean Architecture** (layers separated clearly: domain, use case / service, interface / transport, infrastructure, etc.)
+- **Authentication scheme:** Access Token + Refresh Token
+
+The service will expose a small set of APIs for user registration, login, token refresh, and secure access to a protected resource.
+
+You are free to choose any HTTP framework or router in Go (e.g. `net/http`, Gin, Echo, Chi, Fiber, etc.), as long as the project structure remains aligned with Clean Architecture principles.
+
+---
+
+## 2. Functional Requirements
+
+Your service should support at least the following endpoints (you can adjust URLs and payloads as long as the behavior is equivalent and well documented):
+
+### 2.1 Authentication & User Management
+
+1. **Register**  
+   - `POST /auth/register`  
+   - Create a new user with fields such as: `email`, `password`, and optional profile fields.  
+   - Passwords **must be hashed** (do not store plain text passwords).
+
+2. **Login**  
+   - `POST /auth/login`  
+   - Accepts `email` and `password`.  
+   - On success, returns:
+     - **access_token** (short-lived JWT)
+     - **refresh_token** (longer-lived JWT or opaque token)
+   - On failure, returns an appropriate error (e.g. invalid credentials).
+
+3. **Refresh Token**  
+   - `POST /auth/refresh`  
+   - Accepts a valid **refresh_token**.  
+   - Returns a new pair of **access_token** (and optionally a new **refresh_token**, depending on your design).
+
+4. **Logout**  
+   - `POST /auth/logout`  
+   - Invalidates the current user session (e.g. by revoking tokens or marking them as unusable in Redis).
+
+### 2.2 Protected Resource
+
+5. **Get Current User Profile**  
+   - `GET /me`  
+   - Requires a valid **access_token** (e.g. via `Authorization: Bearer <token>` header).  
+   - Returns basic user information from the database.
+
+You may add more endpoints if you think they improve the design or demonstrate your knowledge, but keep the scope focused on authentication.
+
+---
+
+## 3. Technical Requirements
+
+Your implementation **must** satisfy the following:
+
+### 3.1 Clean Architecture
+
+Organize the project so that:
+
+- **Domain / Entities**: Core business objects and interfaces are independent from frameworks and external tools.
+- **Use Cases / Services**: Application logic (e.g. authentication, token generation, validation) lives here and depends only on domain interfaces.
+- **Interfaces / Transport**: HTTP handlers, routing, request/response DTOs.
+- **Infrastructure / Adapters**: Concrete implementations for PostgreSQL (via GORM), Redis clients, JWT utilities, configuration, logging, etc.
+
+Try to avoid leaking framework-specific types deep into the domain layer.
+
+### 3.2 PostgreSQL with GORM
+
+- Use **PostgreSQL** as the primary database.  
+- Use **GORM** for ORM / database access.  
+- Create proper models for `User` and any additional entity you need.  
+- Apply basic constraints (e.g. unique email, non-null fields) and migrations.
+
+### 3.3 Redis for In-Memory Auth
+
+Use **Redis** to support authentication features such as:
+
+- Storing active refresh tokens or sessions
+- Blacklisting / revoking tokens on logout
+- Handling token versioning or expiry tracking
+
+You are free to choose the exact strategy, but your **README.md** must clearly explain how Redis is used in your solution.
+
+### 3.4 JWT Access & Refresh Tokens
+
+- Use **JWT** for **access tokens**.  
+- Access tokens should be short-lived.  
+- Refresh tokens should be longer-lived, and your service must provide a mechanism to rotate or validate them.  
+- Protect at least one endpoint (e.g. `/me`) with access token validation.
+
+Make sure to keep secrets (e.g. JWT signing key, database credentials) in environment variables or configuration files instead of hard-coding them.
+
+---
+
+## 4. Non-Functional Requirements
+
+We will evaluate your solution based on:
+
+- **Code readability** – clear structure, consistent naming, easy-to-understand logic
+- **Simplicity** – no over-engineering; straightforward and maintainable code
+- **Defensiveness** – input validation, error handling, resilience for common edge cases
+- **Performance awareness** – reasonable use of database and Redis, avoiding unnecessary work
+- **Security basics** – password hashing, safe token handling, avoiding obvious vulnerabilities
+
+---
+
+## 5. Project Setup & Deliverables
+
+Your repository should include at least:
+
+1. **Source code** following Clean Architecture layout.
+2. A clear **`README.md`** with:
+   - Project overview
+   - System requirements (Go version, Docker, etc.)
+   - Step-by-step instructions to **start all services** (including database and Redis)
+   - Example requests (e.g. using `curl` or HTTP client screenshots)
+   - Any design decisions or trade-offs you made
+3. **Configuration files** (e.g. `.env.example`) showing required environment variables.
+4. A **`docker-compose.yml`** file that can start all required containers:
+   - Go application service
+   - PostgreSQL database
+   - Redis instance
+
+We should be able to run the entire stack locally with a command similar to:
+
+```bash
+docker compose up --build
+```
+
+…and then interact with your API using the documented endpoints.
+
+---
+
+## 6. Bonus: Unit Tests
+
+Bonus points if you provide **unit tests**, especially around:
+
+- Authentication use cases (login, refresh, logout)
+- Token generation/validation logic
+- Business rules in the domain layer
+
+Use any Go testing framework you prefer (`testing`, `testify`, etc.). Make sure test instructions are included in your `README.md` (for example: `go test ./...`).
+
+---
+
+## 7. Submission Guidelines
+
+- Host your solution in a Git repository (GitHub, GitLab, or similar).  
+- Make sure the repository is accessible to our team.  
+- Include all required instructions in `README.md` so we can:
+  - Build and run the service
+  - Understand your architecture and design decisions
+
+Please follow the submission channel or instructions provided by the recruiter or job posting.
+
+---
+
+## About us
+
+FlowFusion Technology operates with a clear objective: to establish an infrastructure that propels national businesses into the global landscape through innovation. The company facilitated government efforts, generating over **USD 45 million via e-Commerce**, and has now secured partnerships across the entire value chain.
+
+For more information, visit: <https://www.flowfusion.asia/>
+
+---
+
+© FlowFusion Technology — All Rights Reserved
