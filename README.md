@@ -48,7 +48,7 @@ to establish an infrastructure that propels national businesses into the global 
 
 The company facilitated government efforts, generating over **USD 45 million via e-Commerce**, and has now secured partnerships across the entire value chain.
 
-For more information, visit: <a href="https://www.flowfusion.asia">FLOWFUSION TECHNOLOGY WEBSITE</a>
+For more information, visit:   <a href="https://www.flowfusion.asia/" target="_blank" rel="noopener noreferrer">https://www.flowfusion.asia/</a>
 
 ---
 

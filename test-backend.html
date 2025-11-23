@@ -38,8 +38,9 @@ description: Leading Technology Solutions for Modern Businesses
 
 <ul>
   <li><strong>Language:</strong> Go (Golang)</li>
+  <li><strong>Framework:</strong> Fiber (Go Fiber)</li>
   <li><strong>Database:</strong> PostgreSQL using <strong>GORM</strong></li>
-  <li><strong>In-memory store:</strong> <strong>Redis</strong> for authentication-related data</li>
+  <li><strong>Bonus Option:</strong> Redis (optional) — may be used for token/session storage, but not required</li>
   <li>
     <strong>Architecture style:</strong>
     <strong>Clean Architecture</strong>
@@ -175,19 +176,17 @@ description: Leading Technology Solutions for Modern Businesses
   <li>Apply basic constraints (for example: unique email, non-null fields) and migrations.</li>
 </ul>
 
-<h3>3.3 Redis for In-Memory Auth</h3>
-
-<p>Use <strong>Redis</strong> to support authentication features such as:</p>
-
+<h3>3.3 Bonus: Redis for In-Memory Auth (Optional)</h3>
+<p>
+  Implementing Redis is optional. You may include Redis to enhance authentication features such as:
+</p>
 <ul>
   <li>Storing active refresh tokens or sessions</li>
-  <li>Blacklisting / revoking tokens on logout</li>
-  <li>Handling token versioning or expiry tracking</li>
+  <li>Blacklisting or revoking tokens on logout</li>
+  <li>Managing token versioning or expiration</li>
 </ul>
-
 <p>
-  You are free to choose the exact strategy, but your <code>README.md</code> must clearly
-  explain how Redis is used in your solution.
+  If you choose to use Redis, please explain its role clearly in your <code>README.md</code>. This is a bonus and not required.
 </p>
 
 <h3>3.4 JWT Access &amp; Refresh Tokens</h3>
@@ -263,12 +262,9 @@ description: Leading Technology Solutions for Modern Businesses
     showing required environment variables.
   </li>
   <li>
-    A <strong><code>docker-compose.yml</code></strong> file that can start all required containers:
-    <ul>
-      <li>Go application service</li>
-      <li>PostgreSQL database</li>
-      <li>Redis instance</li>
-    </ul>
+    <strong>Bonus:</strong> A <code>docker-compose.yml</code> file (optional).  
+    You may include Docker Compose to help run PostgreSQL, Redis (if used), and your Go service.  
+    This is not required but counted as a bonus.
   </li>
 </ol>
 
